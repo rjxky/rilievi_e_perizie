@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script src="cordova.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/library.js"></script>
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="container-index" id="wrapper">
+		<div class="wrap-index p-l-55 p-r-55 p-t-80 p-b-30" id="indexForm">
+			<div>
+				<img id="img" style="height: 300px; width: 200px;">
+			</div>
+			<br>
+			<div id="imageDetails">
+				<div class="wrap-input m-b-20">
+					<span><input type="text" class="input" id="txtEmail" name="email" readonly>
+					<label for="txtEmail">EMAIL</label></span>
+					<span class="focus-input"></span>
+				</div>
+				<div class="wrap-input m-b-20">
+					<span><input type="text" class="input balloon" id="txtCoord" name="coord" readonly>
+					<label for="txtCoord">COORDINATES</label></span>
+					<span class="focus-input"></span>
+				</div>
+
+				<div class="wrap-input m-b-20">
+					<span><input type="text" class="input balloon" id="txtDate" name="date" readonly>
+					<label for="txtDate">DATE</label></span>
+					<span class="focus-input"></span>
+				</div>
+
+				<div class="wrap-input m-b-20">
+					<span>Notes:</span>
+					<textarea type="text" class="input" id="txtNotes" name="notes"></textarea>
+				</div>
+
+				<div class="container-login-form-btn">
+					<button type="button" id="btnGetDetails" class="login-form-btn">
+						Get Details
+					</button>
+				</div>
+				<br>
+				<div class="container-register-form-btn">
+					<button class="register-form-btn" id="btnSubmit">
+						Submit
+					</button>
+				</div>
+			</div>
+			<br>
+			<div class="container-login-form-btn">
+				<button type="button" id="btnPhoto" class="login-form-btn">
+					<span class="glyphicon glyphicon-camera"></span> Take Picture
+				</button>
+			</div>
+			<br>
+			<div class="container-login-form-btn">
+				<button class="login-form-btn" id="btnLogout">
+					Logout
+				</button>
+			</div>
+		</div>
+		<div class="snackbar"></div>
+	</div>
+
+	<div id="dropDownSelect1"></div>
+
+</body>
+</html>

@@ -1,0 +1,720 @@
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: url('../fonts/source-sans-pro/SourceSansPro-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: SourceSansPro-Bold;
+  src: url('../fonts/source-sans-pro/SourceSansPro-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: SourceSansPro-SemiBold;
+  src: url('../fonts/source-sans-pro/SourceSansPro-SemiBold.ttf'); 
+}
+
+@font-face {
+  font-family: JosefinSans-Bold;
+  src: url('../fonts/JosefinSans/JosefinSans-Bold.ttf'); 
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: SourceSansPro-Regular, sans-serif;
+}
+
+#wrapper {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*---------------------------------------------*/
+a {
+	font-family: SourceSansPro-Regular;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+a:focus {
+	outline: none !important;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/*---------------------------------------------*/
+
+.balloon {
+  display: inline-block;
+  width: 600px;
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #377D6A;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 60px;
+  transition: all .3s ease-in-out
+}
+
+.balloon.wide {
+  text-indent: 200px
+}
+
+.balloon::-webkit-input-placeholder {
+  color: #efefef;
+  text-indent: 0;
+  font-weight: 300
+}
+
+.balloon+label {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  bottom: 8px;
+  padding: 5px 15px;
+  color: #032429;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0);
+  transition: all .3s ease-in-out;
+  border-radius: 3px;
+  background: rgba(122, 184, 147, 0)
+}
+
+.balloon+label:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 50%;
+  margin-left: -3px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid rgba(122, 184, 147, 0);
+  transition: all .3s ease-in-out
+}
+
+.balloon:focus,
+.balloon:active {
+  color: #377D6A;
+  text-indent: 0 !important;
+  background: #fff
+}
+
+.balloon:focus::-webkit-input-placeholder,
+.balloon:active::-webkit-input-placeholder {
+  color: #aaa
+}
+
+.balloon:focus+label,
+.balloon:active+label {
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  background: #7ab893;
+  transform: translateY(-40px);
+  padding-bottom: 20px
+}
+
+.balloon:focus+label:after,
+.balloon:active+label:after {
+  border-top: 4px solid #7ab893
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0px;
+}
+
+p {
+	font-family: SourceSansPro-Regular;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+}
+
+ul, li {
+	margin: 0px;
+	list-style-type: none;
+}
+
+
+/*---------------------------------------------*/
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+input::-webkit-input-placeholder { color: #4b2354;}
+input:-moz-placeholder { color: #4b2354;}
+input::-moz-placeholder { color: #4b2354;}
+input:-ms-input-placeholder { color: #4b2354;}
+
+textarea::-webkit-input-placeholder { color: #4b2354;}
+textarea:-moz-placeholder { color: #4b2354;}
+textarea::-moz-placeholder { color: #4b2354;}
+textarea:-ms-input-placeholder { color: #4b2354;}
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Utility ]*/
+.txt1 {
+  font-family: SourceSansPro-Regular;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #999999;
+}
+
+.txt2 {
+  font-family: SourceSansPro-Regular;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #4b2354;
+}
+
+.hov1:hover {
+  color: #4b2354;
+  text-decoration: underline;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+
+.container-login {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.container-login::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(93,84,240,0.5);
+  background: -webkit-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+  background: -o-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+  background: -moz-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+  background: linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+  pointer-events: none;
+}
+
+.wrap-login {
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ index ]*/
+
+.container-index {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.container-index::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(93,84,240,0.5);
+  background: -webkit-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+  background: -o-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+  background: -moz-linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+  background: linear-gradient(left, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+  pointer-events: none;
+}
+
+.wrap-index {
+  width: 95%;
+  height: 600px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+/*==================================================================
+[ Form ]*/
+
+.login-form {
+  width: 100%;
+}
+
+.login-form-title {
+  display: block;
+  font-family: SourceSansPro-Bold;
+  font-size: 30px;
+  color: #4b2354;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/*------------------------------------------------------------------
+[ Input ]*/
+
+.wrap-input {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.input {
+  font-family: SourceSansPro-Bold;
+  font-size: 16px;
+  color: #4b2354;
+  line-height: 1.2;
+
+  display: block;
+  width: 100%;
+  height: 62px;
+  background: transparent;
+  padding: 0 20px 0 23px;
+}
+
+
+/*------------------------------------------------------------------
+[ Focus Input ]*/
+
+.focus-input {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input:focus + .focus-input {
+  box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-login-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 160px;
+  height: 50px;
+  background-color: #2e7bd3;
+  border-radius: 25px;
+
+  font-family: SourceSansPro-SemiBold;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  box-shadow: 0 10px 30px 0px rgba(46, 123, 211, 0.5);
+  -moz-box-shadow: 0 10px 30px 0px rgba(46, 123, 211, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(46, 123, 211, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(46, 123, 211, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(46, 123, 211, 0.5);
+}
+
+.login-form-btn:hover {
+  background-color: #112e50;
+  box-shadow: 0 10px 30px 0px rgba(46, 123, 211, 0.8);
+  -moz-box-shadow: 0 10px 30px 0px rgba(46, 123, 211, 0.8);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(46, 123, 211, 0.8);
+  -o-box-shadow: 0 10px 30px 0px rgba(46, 123, 211, 0.8);
+  -ms-box-shadow: 0 10px 30px 0px rgba(46, 123, 211, 0.8);
+}
+
+.container-register-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.register-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 160px;
+  height: 50px;
+  background-color: #bd59d4;
+  border-radius: 25px;
+
+  font-family: SourceSansPro-SemiBold;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+  -moz-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+  -o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+  -ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.5);
+}
+
+.register-form-btn:hover {
+  background-color: #4b2354;
+  box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+  -moz-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+  -webkit-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+  -o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+  -ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+}
+
+
+/*------------------------------------------------------------------
+[ Alert validate ]*/
+
+.validate-input {
+  position: relative;
+}
+
+.alert-validate .focus-input {
+  box-shadow: 0 5px 30px 0px rgba(250, 66, 81, 0.1);
+  -moz-box-shadow: 0 5px 30px 0px rgba(250, 66, 81, 0.1);
+  -webkit-box-shadow: 0 5px 30px 0px rgba(250, 66, 81, 0.1);
+  -o-box-shadow: 0 5px 30px 0px rgba(250, 66, 81, 0.1);
+  -ms-box-shadow: 0 5px 30px 0px rgba(250, 66, 81, 0.1);
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  min-height: 62px;
+  background-color: #fff;
+  border-radius: 20px;
+  top: 0px;
+  left: 0px;
+  padding: 0 45px 0 22px;
+  pointer-events: none;
+
+  font-family: SourceSansPro-Bold;
+  font-size: 16px;
+  color: #fa4251;
+  line-height: 1.2;
+}
+
+.btn-hide-validate {
+  font-family: Material-Design-Iconic-Font;
+  font-size: 15px;
+  color: #fa4251;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 62px;
+  top: 0px;
+  right: 23px;
+}
+
+.rs1-alert-validate.alert-validate::before {
+  background-color: #fff;
+}
+
+.true-validate::after {
+  content: "\f269";
+  font-family: Material-Design-Iconic-Font;
+  font-size: 15px;
+  color: #57b846;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 62px;
+  top: 0px;
+  right: 23px;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Social item ]*/
+
+#indexForm {
+  overflow: auto;
+}
+
+#imageDetails {
+  height: min-content;
+  border: 1px solid rgba(170, 170, 170, 0.616);
+  border-radius: 5px;
+}
+
+.login-social-item {
+  font-size: 25px;
+  color: #3b5998;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 5px;
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.login-social-item img {
+  width: 26px;
+}
+
+.login-social-item:hover {
+  color: #3b5998;
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ Responsive ]*/
+
+@media (max-width: 480px) {
+  .wrap-login {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/**************** SNACKBAR *******************/
+
+  /* The snackbar - position it at the bottom and in the middle of the screen */
+  .snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 75px; /* 75px from the bottom */
+  }
+
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  .snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 75px; opacity: 1;}
+  }
+
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 75px; opacity: 1;}
+  }
+
+  @-webkit-keyframes fadeout {
+    from {bottom: 75px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+  @keyframes fadeout {
+    from {bottom: 75px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

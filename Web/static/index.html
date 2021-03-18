@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Rilievi & Perizie</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdWgu3MKgdqJyBFqh7bEAOmXpzwWRgVL0"></script>	<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/library.js"></script>
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="container-index" id="wrapper">
+		<div class="wrap-index p-l-55 p-r-55 p-t-80 p-b-30" id="indexForm">
+			<br>
+			<div class="msg"></div>	
+			<div id="map" class="map"></div> 
+			<div id="panel" class="panel"></div>
+			<br>
+			<div id="markerData">
+				<span>Image:</span>
+				<div class="wrap-input m-b-20">
+					<img id="img" style="height: 300px; width: 200px;">
+				</div>
+				<div class="wrap-input m-b-20">
+					<span>Email:</span>
+					<input type="text" class="input" id="txtEmail" name="email" readonly>
+				</div>
+				<div class="wrap-input m-b-20">
+					<span>Coordinates:</span>
+					<input type="text" class="input" id="txtCoord" name="coord" readonly>
+				</div>
+
+				<div class="wrap-input m-b-20">
+					<span>Date:</span>
+					<input type="text" class="input" id="txtDate" name="date" readonly>
+				</div>
+
+				<div class="wrap-input m-b-20">
+					<span>User comment:</span>
+					<input type="text" class="input" id="txtUserComment" name="userComment" readonly>
+				</div>
+
+				<div class="wrap-input m-b-20">
+					<span>Admin comment:</span>
+					<textarea type="text" class="input" id="txtAdminComment" name="adminComment"></textarea>
+				</div>
+
+				<div class="container-register-form-btn">
+					<button class="register-form-btn" id="btnComment">
+						Submit comment
+					</button>
+				</div>
+				<br>
+				<div class="container-login-form-btn">
+					<button class="login-form-btn" id="btnPath">
+						Calculate Path
+					</button>
+				</div>
+			</div>
+			<br>
+			<div class="container-register-form-btn">
+				<button class="register-form-btn" id="btnDeletePath">
+					Delete Path
+				</button>
+			</div>
+			<br>
+			<div class="container-register-form-btn">
+				<button class="register-form-btn" id="btnCreateUser">
+					Create User
+				</button>
+			</div>
+			<br>
+			<div class="container-login-form-btn">
+				<button class="login-form-btn" id="btnLogout">
+					Logout
+				</button>
+			</div>
+			<br>
+		</div>
+		<div class="wrap-login p-l-55 p-r-55 p-t-80 p-b-30" id="createUserForm">
+			<span class="login-form-title p-b-37">
+				Create User
+			</span>
+
+			<div class="wrap-input validate-input m-b-20" data-validate="Enter email">
+				<span><input type="text" class="input balloon" id="txtEmailCreate" placeholder="Enter Email" name="email" required>
+				<label for="txtEmailCreate">EMAIL</label></span>
+				<span class="focus-input"></span>
+			</div>
+
+			<div class="container-register-form-btn">
+				<button class="register-form-btn" id="btnCreate">
+					Create User
+				</button>
+			</div>
+			<br><br>
+		</div>
+		<div class="snackbar"></div>
+	</div>
+
+	<div id="dropDownSelect1"></div>
+
+</body>
+</html>

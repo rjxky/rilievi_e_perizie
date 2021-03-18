@@ -1,0 +1,43 @@
+{
+  "name": "progetto_rilievi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rjxky/rilievi_e_perizie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjxky/rilievi_e_perizie/issues"
+  },
+  "homepage": "https://github.com/rjxky/rilievi_e_perizie#readme",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.25.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "fs": "0.0.1-security",
+    "generate-password": "^1.6.0",
+    "headers": "^0.9.6",
+    "http": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mime": "^2.5.2",
+    "mongodb": "^3.6.4",
+    "ms": "^2.1.3",
+    "nodemailer": "^6.5.0",
+    "querystring": "^0.2.1",
+    "tryjson": "^1.1.4",
+    "uuid": "^8.3.2"
+  }
+}
